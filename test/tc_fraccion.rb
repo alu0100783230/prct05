@@ -13,6 +13,7 @@ class TestFraccion < Test::Unit::TestCase
 		assert_equal("10/9", (@dostercios/@tresquintos).to_s)
 		assert_equal("19/15", (@dostercios+@tresquintos).to_s)
 		assert_equal("-1/15", (@dostercios-@tresquintos).to_s)
+		assert_equal("2/18", (@dostercios*Fraccion.new(2,12)).to_s)
 	end
 	def test_tipo
 		assert_raise(RuntimeError) {Fraccion.new('1','1')}
