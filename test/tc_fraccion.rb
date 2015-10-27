@@ -10,5 +10,6 @@ class TestFraccion < Test::Unit::TestCase
 	def test
 		assert_equal("1/1", @uno.to_s)
 		assert_equal("6/15", (@dostercios*@tresquintos).to_s)
+		assert_equal("10/9", (@dostercios/@tresquintos).to_s)
 	end
 end
