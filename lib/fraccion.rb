@@ -16,5 +16,11 @@ class Fraccion
 	def /(fraccion)
 		Fraccion.new(@n * fraccion.d, @d * fraccion.n)
 	end
+	def +(fraccion)
+		h = @d * fraccion.d
+		a = @d * fraccion.n
+		b = fraccion.d * @n
+		Fraccion.new(a+b,h)
+	end
 end
 
