@@ -4,9 +4,11 @@ require 'test/unit'
 class TestFraccion < Test::Unit::TestCase
 	def setup
  		@uno = Fraccion.new(1,1)
+ 		@dostercios = Fraccion.new(2,3)
+ 		@tresquintos = Fraccion.new(3,5)
 	end
 	def test
 		assert_equal("1/1", @uno.to_s)
-		assert_equal("2/1", (@uno*2).to_s)
+		assert_equal("6/15", (@dostercios*@tresquintos).to_s)
 	end
 end

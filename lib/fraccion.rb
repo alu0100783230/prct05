@@ -6,11 +6,17 @@ class Fraccion
 		@n = n
 		@d = d
 	end
+	def n
+		@n
+	end
+	def d
+		@d
+	end
 	def to_s
 		"#{@n}/#{@d}"
 	end
-	def *(value)
-		Fraccion.new(@n * value, @d)
+	def *(fraccion)
+		Fraccion.new(@n * fraccion.n, @d * fraccion.d)
 	end
 end
 
