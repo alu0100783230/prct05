@@ -22,5 +22,11 @@ class Fraccion
 		b = fraccion.d * @n
 		Fraccion.new(a+b,h)
 	end
+	def -(fraccion)
+		h = @d * fraccion.d
+		a = @d * fraccion.n
+		b = fraccion.d * @n
+		Fraccion.new(a-b,h)
+	end
 end
 
